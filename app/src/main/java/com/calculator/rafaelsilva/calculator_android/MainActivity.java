@@ -58,18 +58,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View view){
+        Calculator calculator = new Calculator();
+        double number1=0.0;
+        double number2 = 0.0;
+        double result = 0.0;
+
+        number1 = Double.parseDouble(etNumber1.getText().toString());
+        number2 = Double.parseDouble(etNumber2.getText().toString());
+
+
+
         if(view==btAddition){
-            tvResultValue.setText("You clicked on the addition button");
+            result = calculator.addition(number1, number2);
+            tvResultValue.setText(String.valueOf(result));
         }
 
         if(view==btSubtraction){
-            tvResultValue.setText("You clicked on the subtraction button");
+            result = calculator.subtraction(number1, number2);
+            tvResultValue.setText(String.valueOf(result));
+
         }
         if(view==btMultiplication){
-            tvResultValue.setText("You clicked on the multiplication button");
+            result = calculator.multiplication(number1, number2);
+            tvResultValue.setText(String.valueOf(result));
         }
+
         if(view==btDivision){
-            tvResultValue.setText("You clicked on the division button");
+            result = calculator.division(number1, number2);
+            if (result==-1.57222){
+                tvResultValue.setText("You can not perform division by zero");
+            }else{
+                tvResultValue.setText(String.valueOf(result));
+            }
+
+
         }
 
     }

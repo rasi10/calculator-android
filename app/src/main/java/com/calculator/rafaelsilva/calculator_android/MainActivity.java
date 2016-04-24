@@ -66,8 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         number1 = Double.parseDouble(etNumber1.getText().toString());
         number2 = Double.parseDouble(etNumber2.getText().toString());
 
-
-
         if(view==btAddition){
             result = calculator.addition(number1, number2);
             tvResultValue.setText(String.valueOf(result));

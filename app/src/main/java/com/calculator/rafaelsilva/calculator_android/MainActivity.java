@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btAddition;
     Button btSubtraction;
@@ -31,15 +31,20 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        tvResultValue = (TextView) findViewById(R.id.tvResultValue);
+
+        etNumber1 = (EditText) findViewById(R.id.etNumber1);
+        etNumber2 = (EditText) findViewById(R.id.etNumber2);
+
         btAddition = (Button) findViewById(R.id.btAddition);
         btSubtraction = (Button) findViewById(R.id.btSubtraction);
         btMultiplication = (Button) findViewById(R.id.btMultiplication);
         btDivision = (Button) findViewById(R.id.btDivision);
 
-        tvResultValue = (TextView) findViewById(R.id.tvResultValue);
-
-        etNumber1 = (EditText) findViewById(R.id.etNumber1);
-        etNumber2 = (EditText) findViewById(R.id.etNumber2);
+        btAddition.setOnClickListener(this);
+        btSubtraction.setOnClickListener(this);
+        btMultiplication.setOnClickListener(this);
+        btDivision.setOnClickListener(this);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -50,6 +55,23 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void onClick(View view){
+        if(view==btAddition){
+            tvResultValue.setText("You clicked on the addition button");
+        }
+
+        if(view==btSubtraction){
+            tvResultValue.setText("You clicked on the subtraction button");
+        }
+        if(view==btMultiplication){
+            tvResultValue.setText("You clicked on the multiplication button");
+        }
+        if(view==btDivision){
+            tvResultValue.setText("You clicked on the division button");
+        }
+
     }
 
     @Override
@@ -74,4 +96,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
 

@@ -15,5 +15,84 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/tvNumber1"
+        android:id="@+id/tvNumber1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etNumber1"
+        android:layout_below="@+id/tvNumber1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvNumber2"
+        android:id="@+id/tvNumber2"
+        android:layout_below="@+id/etNumber1"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etNumber2"
+        android:layout_below="@+id/tvNumber2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btAddition"
+        android:id="@+id/btAddition"
+        android:layout_below="@+id/etNumber2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btSubtraction"
+        android:id="@+id/btSubtraction"
+        android:layout_alignTop="@+id/btAddition"
+        android:layout_toEndOf="@+id/btAddition" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btMultiplication"
+        android:id="@+id/btMultiplication"
+        android:layout_alignBottom="@+id/btSubtraction"
+        android:layout_toEndOf="@+id/btSubtraction" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btDivision"
+        android:id="@+id/btDivision"
+        android:layout_alignBottom="@+id/btMultiplication"
+        android:layout_toEndOf="@+id/btMultiplication" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvResult"
+        android:id="@+id/tvResult"
+        android:layout_below="@+id/btAddition"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvValueOfTheResult"
+        android:id="@+id/tvResultValue"
+        android:layout_below="@+id/tvResult"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

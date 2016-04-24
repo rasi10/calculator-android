@@ -8,8 +8,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button btAddition;
+    Button btSubtraction;
+    Button btMultiplication;
+    Button btDivision;
+
+    TextView tvResultValue;
+
+    EditText etNumber1;
+    EditText etNumber2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +30,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        btAddition = (Button) findViewById(R.id.btAddition);
+        btSubtraction = (Button) findViewById(R.id.btSubtraction);
+        btMultiplication = (Button) findViewById(R.id.btMultiplication);
+        btDivision = (Button) findViewById(R.id.btDivision);
+
+        tvResultValue = (TextView) findViewById(R.id.tvResultValue);
+
+        etNumber1 = (EditText) findViewById(R.id.etNumber1);
+        etNumber2 = (EditText) findViewById(R.id.etNumber2);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -50,3 +74,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
